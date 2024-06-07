@@ -1,0 +1,218 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+* {
+  font: inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+button,
+input,
+textarea {
+    outline: none;
+    border: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+textarea:focus {
+    /*outline: none !important;
+    border: none !important;*/
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: smooth;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*  Neutral: #;
+    Light: #;
+    Dark: #;
+ */
+:root{
+    --ff: ;
+    
+    --fw-bold: 900;
+    --fw-semi-bold: 700;
+    --fw-normal: 400;
+    --fw-light: 200;
+
+    --fs-main: clamp(.8em, 4vw, 1.2em);
+    --fs-h1: clamp(1.7em, 4vw, 2em);
+    --fs-h2: clamp(1.4em, 4vw, 1.7em);
+    --fs-h3: clamp(1.2em, 4vw, 1.5em);
+    --fs-h4: clamp(1.1em, 4vw, 1.4em);
+    --fs-h5: clamp(1em, 4vw, 1.3em);
+    --fs-h6: clamp(.6em, 4vw, 1em);
+
+    --fs-xl: clamp(1.7em, 4vw, 2em);
+    --fs-l: clamp(1.4em, 4vw, 1.7em);
+    --fs-m: clamp(1.2em, 4vw, 1.5em);
+    --fs-ms: clamp(.8em, 4vw, 1.2em);
+    --fs-s: clamp(.6em, 4vw, 1em);
+    --fs-xs: clamp(.6em, 4vw, .8em);
+
+    --clr-light: ;
+    --clr-dark: ;
+    --clr-neutral: ;
+
+    --clr-rgba-gray: rgba(0,0,0,0.15);
+    --clr-rgba-gray-softer: rgba(0,0,0,0.05);
+
+    --clr-linear-gradient: ;
+    
+    --clr-neutral-100: ;
+    --clr-neutral-200: ;
+    --clr-neutral-300: ;
+    --clr-neutral-400: ;
+    --clr-neutral-500: ;
+    --clr-neutral-600: ;
+    
+    --clr-text-dark: var(--clr-dark);
+    --clr-text-light: var(--clr-light);
+    --clr-text-neutral: var(--clr-neutral);
+}
+h1{ font-size: var(--fs-h1); font-weight: var(--fw-bold);}
+h2{ font-size: var(--fs-h2); font-weight: var(--fw-semi-bold);}
+h3{ font-size: var(--fs-h3); font-weight: var(--fw-semi-bold);}
+h4{ font-size: var(--fs-h4); font-weight: var(--fw-semi-bold);}
+h5{ font-size: var(--fs-h5); font-weight: var(--fw-semi-bold);}
+h6{ font-size: var(--fs-h6); font-weight: var(--fw-semi-bold);}
+
+button,
+button[type="submit"],
+input[type="button"],
+input[type="submit"]{
+    padding: .6em 1em;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: .5em;
+    border-radius: .5em;
+}
+
+button:is(:hover,:focus-visible),
+button[type="submit"]:is(:hover,:focus-visible),
+input[type="button"]:is(:hover,:focus-visible),
+input[type="submit"]:is(:hover,:focus-visible){
+
+}
+
+input:not([type="button"], [type="submit"]),
+textarea{
+  border-radius: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: none;
+  padding: .3em 1em;
+}
+
+input:not([type="button"], [type="submit"]):is(:focus,:focus-visible),
+textarea:is(:focus,:focus-visible){ 
+}
+
+input:not([type="button"], [type="submit"]):is(:focus,:focus-visible)::placeholder,
+textarea:is(:focus,:focus-visible)::placeholder{
+  transition: .3s;
+}
+
+input:not([type="button"], [type="submit"]):is(:focus,:focus-visible)::placeholder,
+textarea:is(:focus,:focus-visible)::placeholder{
+  opacity: .4;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  accent-color: var(--clr-neutral);
+}
+
+::selection{
+    background-color: var(--clr-neutral-300);
+}
+
+/* Styling */
+body{
+    font-family: var(--ff);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-main);
+    color: var(--clr-text-dark);
+    background-color: var(--clr-light);
+}
